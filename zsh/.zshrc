@@ -1,12 +1,13 @@
 # Path to your oh-my-zsh installation.
-export ZSH=$HOME/.oh-my-zsh
+export ZSH=~/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="robbyrussell"
+ZSH_THEME="powerlevel9k/powerlevel9k"
 
+POWERLEVEL9K_MODE='awesome-patched'
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
@@ -53,7 +54,7 @@ plugins=(git)
 
 # User configuration
 
-export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH="/usr/local/bin:/usr/bin:/cygdrive/c/cmder/vendor/conemu-maximus5:/cygdrive/c/cmder/vendor/conemu-maximus5/ConEmu:/cygdrive/c/Program Files/Haskell/bin:/cygdrive/c/Program Files/Haskell Platform/2014.2.0.0/lib/extralibs/bin:/cygdrive/c/Program Files/Haskell Platform/2014.2.0.0/bin:/cygdrive/c/Program Files (x86)/packer_0.8.1:/cygdrive/c/Program Files (x86)/JetBrains/IntelliJ IDEA 14.1.4/bin:/cygdrive/c/Program Files/Sublime Text 3:/cygdrive/d/dev/gradle-2.5/bin:/cygdrive/d/dev/apache-maven-3.3.3/bin:/cygdrive/d/dev/jdk-1.8.0_u45/bin:/cygdrive/c/ProgramData/Oracle/Java/javapath:/cygdrive/c/cmder:/cygdrive/c/Ruby22-x64/bin:/cygdrive/c/Windows/system32:/cygdrive/c/Windows:/cygdrive/c/Windows/System32/Wbem:/cygdrive/c/Windows/System32/WindowsPowerShell/v1.0:/cygdrive/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/cygdrive/c/Program Files/Sublime Text 3:/cygdrive/c/Program Files (x86)/Git/cmd:/cygdrive/c/Program Files (x86)/Git/bin:/cygdrive/c/HashiCorp/Vagrant/bin:/cygdrive/c/Program Files/Haskell Platform/2014.2.0.0/mingw/bin:/cygdrive/c/Users/snarez/AppData/Roaming/cabal/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
