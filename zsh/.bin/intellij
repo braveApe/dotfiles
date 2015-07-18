@@ -1,0 +1,30 @@
+#!/bin/sh
+ 
+# check for where the latest version of IDEA is installed
+IDEA="idea64.exe"
+wd=`pwd`
+
+if [ -d "$1" ]; then
+  wd=`ls -1d "$1" | head -n1`
+fi
+
+wwd=`cygpath -aw $wd`
+
+if [ -f "$1" ]; then
+  cygstart -a "$IDEA" "$1"
+else
+    pushd $wd > /dev/null
+    if [ -d ".idea" ]; then
+      cygstart "$IDEA" "$wwd"
+    elif [ -f *.iml ]; then
+      IML_FILE=`ls -1d *.iml | head -n1`
+      cygstart "$IDEA" "$wwd/$IML_FILE"
+    elif [ -f pom.xml ]; then
+      cygstart "$IDEA" "$wwd/pom.xml"
+    elif [ -f build.gradle ]; then
+      cygstart "$IDEA" "$wwd/build.gradle"
+    else
+      cygstart "$IDEA"
+    fi
+    popd > /dev/null
+fi

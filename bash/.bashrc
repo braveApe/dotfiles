@@ -25,3 +25,4 @@ export PATH="$PATH:/c/MinGW/msys/1.0/bin"
 
 # finally add the original PATH contents after our own.
 export PATH="$PATH:$PATH_ORIG"
+
